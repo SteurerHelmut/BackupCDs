@@ -1,0 +1,33 @@
+Hallo C,
+
+ich möchte ein Programm in C++ erstellen.
+
+0. Programmiersprache
+Visual C++ mit Windows-Oberfläche auf Basis einer Form
+1. Zweck
+Mit dem Programm sollen CDs auf eine externe Festplatte gesichert werden.
+2. Verzeichnisse
+Das Stammverzeichnis bzw. Volume der CD ist das Laufwerk 'F:'. Der Volumebezeichner der externen Festplatte, auf der gesichert wird, ist 'M:'. Das Stammverzeichnis auf der externen Festplatte ist M:\Fotos\OpaCDs. In diesem Verzeichnis soll für jede zu sichernde CD aus dem Programm heraus ein Unterverzeichnis mit dem Namen OpaCD_<number> erstellt werden. <number> ist dabei eine laufende Nummer, die weitergezählt wird.
+3. Protokollierung
+Die Rootverzeichnisse der jeweiligen CD werden in einem CSV-File, das als Delimiter den Strichpunkt ';' verwendet, notiert. Die CSV-Datei hat den Namen 'cd_verzeichnisse.csv'. 
+Es wird für jedes Root-Verzeichnis jeder CD eine Zeile mit vier Feldern dieser CSV-Datei hinzugefügt. Der Inhalt dieser Zeile besteht aus dem Datum des Sicherungslaufes, einer Bemerkung, dem CD-Namen 'OpaCD_<number> und dem jeweiligen Root-Verzeichnisnamen.
+Die laufende Nummer <number> wird zu Beginn des Programms aus der CSV-Datei ermittelt oder über ein Eingabefeld eingegeben. Die Bemerkung wird mit 'CD-Verzeichnis archiviert' vorbelegt, kann aber in einem Textfeld bei der Benutzung des Programms abgeändert werden.
+4. Programmoberfläche
+Die Oberfläche der Form soll folgendes Aussehen haben:
+Programmtitel: Backup Program for CDs
+Start-Button: Mit dem Start-Button wird der eigentliche Backup-Vorgang gestartet.
+Quit-Button: Mit dem Quit-Button wird das Programm beendet.
+editierbares Textfeld: Textfeld mit dem Startwert 'CD-Verzeichnis archiviert'
+Listfeld: In dem Listfeld wird der Inhalt der zu sichernden CD angezeigt.
+Fortschrittsbalken: Mit dem Fortschrittsbalken soll angezeigt werden, wie der Kopiervorgang von CD auf die externe Harddrive vorangeht.
+Textfeld für Meldungen: in einem Textfeld sollen Fehlermeldungen des Kopiervorgangs bzw. 
+
+
+
+
+Über entsprechende Auswahlkästchen, die primär das Auswahlhäkchen haben, können durch Entfernen der Häkchen entsprechende Root-Verzeichnisse von der Sicherung ausgeschlossen werden.
+
+
+Es wäre mir lieber die laufende CD-Nummer optional aus der existierenden CSV-Datei cd_verzeichnisse.csv auszulesen oder aus der cd_counter.txt zu gewinnen. Die Entscheidung, nach welchem Verfahren die CD-Nummer gewonnen werden soll, möchte ich zu Beginn der Session durch Kennzeichnung des nicht benutzen Codes als Kommentar bewerkstelligen. Die nächste CD-Nummer kann aus der CSV-Datei gewonnen werden, indem man im Feld mit den OpaCD_<laufende Nummer> Einträgen, die höchste <laufende Nummer> am Anfang des Programmlaufs ermittelt. Im anderen Fall wird die laufende CD-Nummer wie bisher aus der Datei cd_counter.txt gewonnen.
+Bitte ändere den Code entsprechend.
+
